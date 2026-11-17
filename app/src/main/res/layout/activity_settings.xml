@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Settings"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language / ভাষা"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_lang_en"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:text="English"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_lang_bn"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_glass"
+                android:text="বাংলা"
+                android:textColor="?android:attr/textColorPrimary" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appearance"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btn_dark_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_glass"
+            android:text="🌙 Dark Mode: On"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daily Goal (minutes)"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/et_goal"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:hint="120"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textColorHint="?android:attr/textColorSecondary" />
+
+            <Button
+                android:id="@+id/btn_goal_save"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_button"
+                android:text="Save"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local Backup"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All your data stays on this device. Export a backup file to keep it safe, or import one to restore."
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/btn_export"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_button"
+            android:text="⬆ Export Backup"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_import"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_glass"
+            android:text="⬇ Import Backup"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <TextView
+            android:id="@+id/tv_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StudyFlow v1.0 • Offline • Data stored locally"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+</ScrollView>

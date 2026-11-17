@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_gradient</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#EDE9FE</item>
+        <item name="android:colorAccent">#EC4899</item>
+    </style>
+    <style name="LightTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/light_bg</item>
+        <item name="android:textColorPrimary">#1E1033</item>
+        <item name="android:textColorSecondary">#4C1D95</item>
+        <item name="android:colorAccent">#DB2777</item>
+    </style>
+    <style name="GlassPanel">
+        <item name="android:background">@drawable/bg_glass</item>
+    </style>
+</resources>
