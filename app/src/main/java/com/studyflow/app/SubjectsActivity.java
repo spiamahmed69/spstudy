@@ -42,11 +42,12 @@ public class SubjectsActivity extends BaseActivity {
                 JSONObject c = chapters.optJSONObject(j);
                 if (c != null) container.addView(chapterRow(s, i, c, j, subjects));
             }
+            final int subjectIndex = i;
             Button addCh = new Button(this);
             addCh.setText("＋ Chapter");
             addCh.setBackgroundResource(R.drawable.bg_glass);
             addCh.setTextColor(0xFFFFFFFF);
-            addCh.setOnClickListener(v -> askChapterTitle(i, subjects));
+            addCh.setOnClickListener(v -> askChapterTitle(subjectIndex, subjects));
             container.addView(addCh);
             container.addView(spacer());
         }
