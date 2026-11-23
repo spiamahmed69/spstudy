@@ -1,7 +1,8 @@
 # StudyFlow — Personal Study Tracker (Android)
 
-A premium, offline-first Android study tracker with a glassmorphism UI in
-dark purple, pink and violet gradients.
+A premium, offline-first Android study tracker with a light neumorphic
+orange/white UI — soft white cards, orange pill buttons, and a clean,
+readable layout. Dark mode uses the same orange accents on dark cards.
 
 ## Features
 

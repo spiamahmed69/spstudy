@@ -46,18 +46,18 @@ public class MainActivity extends BaseActivity {
         ProgressBar pb = findViewById(R.id.progress_goal);
         pb.setMax(100);
         pb.setProgress(goal > 0 ? Math.min(100, today * 100 / goal) : 0);
-        ((TextView) findViewById(R.id.tv_streak)).setText("🔥 " + streak + " " + t("streak"));
+        ((TextView) findViewById(R.id.tv_streak)).setText(streak + " " + t("streak"));
         ((TextView) findViewById(R.id.tv_week)).setText(t("week_total") + ": " + weekTotal + " " + t("minutes"));
         ((TextView) findViewById(R.id.tv_total)).setText(
                 t("total") + ": " + total + " " + t("minutes") + " • " + sessions + " " + t("sessions"));
-        ((Button) findViewById(R.id.btn_timer)).setText("⏱ " + t("timer"));
-        ((Button) findViewById(R.id.btn_pomodoro)).setText("🍅 " + t("pomodoro"));
-        ((Button) findViewById(R.id.btn_subjects)).setText("📖 " + t("subjects"));
-        ((Button) findViewById(R.id.btn_planner)).setText("🗓 " + t("planner"));
-        ((Button) findViewById(R.id.btn_notes)).setText("📝 " + t("notes"));
-        ((Button) findViewById(R.id.btn_history)).setText("🕘 " + t("history"));
-        ((Button) findViewById(R.id.btn_charts)).setText("📊 " + t("charts"));
-        ((Button) findViewById(R.id.btn_reminders)).setText("⏰ " + t("reminders"));
-        ((Button) findViewById(R.id.btn_settings)).setText("⚙️ " + t("settings"));
+        ((Button) findViewById(R.id.btn_timer)).setText(t("timer"));
+        ((Button) findViewById(R.id.btn_pomodoro)).setText(t("pomodoro"));
+        ((Button) findViewById(R.id.btn_subjects)).setText(t("subjects"));
+        ((Button) findViewById(R.id.btn_planner)).setText(t("planner"));
+        ((Button) findViewById(R.id.btn_notes)).setText(t("notes"));
+        ((Button) findViewById(R.id.btn_history)).setText(t("history"));
+        ((Button) findViewById(R.id.btn_charts)).setText(t("charts"));
+        ((Button) findViewById(R.id.btn_reminders)).setText(t("reminders"));
+        ((Button) findViewById(R.id.btn_settings)).setText(t("settings"));
     }
 }

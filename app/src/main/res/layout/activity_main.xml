@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="📚 StudyFlow"
+            android:text="StudyFlow"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -29,7 +29,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_glass"
+            android:background="@drawable/bg_hero"
             android:orientation="vertical"
             android:padding="18dp">
 
@@ -38,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Today"
-                android:textColor="?android:attr/textColorSecondary"
+                android:textColor="#FFE8C2"
                 android:textSize="14sp" />
 
             <TextView
@@ -46,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0 min"
-                android:textColor="?android:attr/textColorPrimary"
+                android:textColor="#FFFFFF"
                 android:textSize="44sp"
                 android:textStyle="bold" />
 
@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Daily Goal: 0 / 120 min"
-                android:textColor="?android:attr/textColorSecondary"
+                android:textColor="#FFE8C2"
                 android:textSize="14sp"
                 android:layout_marginTop="4dp" />
 
@@ -66,7 +66,9 @@
                 android:layout_height="12dp"
                 android:layout_marginTop="10dp"
                 android:max="100"
-                android:progress="0" />
+                android:progress="0"
+                android:progressTint="@android:color/white"
+                android:progressBackgroundTint="#80FFFFFF" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,8 +81,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="🔥 0 day streak"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:text="0 day streak"
+                    android:textColor="#FFFFFF"
                     android:textSize="15sp" />
 
                 <TextView
@@ -89,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="This week: 0 min"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColor="#FFFFFF"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -98,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Total: 0 min • 0 sessions"
-                android:textColor="?android:attr/textColorSecondary"
+                android:textColor="#FFE8C2"
                 android:textSize="14sp"
                 android:layout_marginTop="8dp" />
         </LinearLayout>
@@ -115,7 +117,7 @@
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_button"
-                android:text="⏱ Timer"
+                android:text="Timer"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
@@ -126,7 +128,7 @@
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_button"
-                android:text="🍅 Pomodoro"
+                android:text="Pomodoro"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -143,7 +145,7 @@
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_glass"
-                android:text="📖 Subjects"
+                android:text="Subjects"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="16sp" />
 
@@ -154,7 +156,7 @@
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_glass"
-                android:text="🗓 Planner"
+                android:text="Planner"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -171,7 +173,7 @@
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_glass"
-                android:text="📝 Notes"
+                android:text="Notes"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="16sp" />
 
@@ -182,7 +184,7 @@
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_glass"
-                android:text="🕘 History"
+                android:text="History"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -200,7 +202,7 @@
                 android:layout_height="64dp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_glass"
-                android:text="📊 Progress"
+                android:text="Progress"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="16sp" />
 
@@ -211,7 +213,7 @@
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_glass"
-                android:text="⏰ Reminders"
+                android:text="Reminders"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="16sp" />
 
@@ -222,7 +224,7 @@
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_glass"
-                android:text="⚙️ Settings"
+                android:text="Settings"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="16sp" />
         </LinearLayout>

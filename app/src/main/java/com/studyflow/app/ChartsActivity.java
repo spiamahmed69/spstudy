@@ -11,7 +11,7 @@ public class ChartsActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_charts);
-        ((TextView) findViewById(R.id.tv_title)).setText("📊 " + t("charts"));
+        ((TextView) findViewById(R.id.tv_title)).setText(t("charts"));
         int[] week = StudyData.last7Days(this);
         BarChartView chart = findViewById(R.id.chart);
         chart.setValues(week);

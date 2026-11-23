@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme attributes so card/input drawables follow the in-app
+         light/dark theme (AppTheme vs LightTheme), not system night mode. -->
+    <attr name="neuCard" format="color" />
+    <attr name="neuStroke" format="color" />
+    <attr name="neuInput" format="color" />
+</resources>

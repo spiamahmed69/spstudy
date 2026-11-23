@@ -17,7 +17,7 @@ public class SettingsActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        ((TextView) findViewById(R.id.tv_title)).setText("⚙️ " + t("settings"));
+        ((TextView) findViewById(R.id.tv_title)).setText(t("settings"));
         ((EditText) findViewById(R.id.et_goal)).setText(String.valueOf(StudyData.getGoal(this)));
         updateDarkButton();
 
@@ -32,7 +32,7 @@ public class SettingsActivity extends BaseActivity {
             recreate();
         });
         findViewById(R.id.btn_dark_toggle).setOnClickListener(v -> {
-            boolean dark = StudyData.prefs(this).getBoolean("dark_mode", true);
+            boolean dark = StudyData.prefs(this).getBoolean("dark_mode", false);
             StudyData.prefs(this).edit().putBoolean("dark_mode", !dark).apply();
             recreate();
         });
@@ -63,9 +63,9 @@ public class SettingsActivity extends BaseActivity {
     }
 
     private void updateDarkButton() {
-        boolean dark = StudyData.prefs(this).getBoolean("dark_mode", true);
+        boolean dark = StudyData.prefs(this).getBoolean("dark_mode", false);
         ((Button) findViewById(R.id.btn_dark_toggle)).setText(
-                (dark ? "🌙 " : "☀️ ") + t("dark_mode") + ": " + (dark ? "On" : "Off"));
+                t("dark_mode") + ": " + (dark ? "On" : "Off"));
     }
 
     @Override

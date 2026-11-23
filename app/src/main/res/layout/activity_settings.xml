@@ -13,7 +13,7 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="⚙️ Settings"
+            android:text="Settings"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="26sp"
             android:textStyle="bold" />
@@ -68,7 +68,7 @@
             android:layout_height="52dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_glass"
-            android:text="🌙 Dark Mode: On"
+            android:text="Dark Mode: On"
             android:textColor="?android:attr/textColorPrimary" />
 
         <TextView
@@ -131,7 +131,7 @@
             android:layout_height="52dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_button"
-            android:text="⬆ Export Backup"
+            android:text="Export Backup"
             android:textColor="#FFFFFF" />
 
         <Button
@@ -140,14 +140,14 @@
             android:layout_height="52dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_glass"
-            android:text="⬇ Import Backup"
+            android:text="Import Backup"
             android:textColor="?android:attr/textColorPrimary" />
 
         <TextView
             android:id="@+id/tv_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="StudyFlow v1.0 • Offline • Data stored locally"
+            android:text="StudyFlow v1.1 • Offline • Data stored locally"
             android:textColor="?android:attr/textColorSecondary"
             android:textSize="14sp"
             android:layout_marginTop="24dp"

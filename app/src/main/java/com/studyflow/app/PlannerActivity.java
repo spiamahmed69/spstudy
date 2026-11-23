@@ -23,7 +23,7 @@ public class PlannerActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        ((TextView) findViewById(R.id.tv_title)).setText("🗓 " + t("planner"));
+        ((TextView) findViewById(R.id.tv_title)).setText(t("planner"));
         ((Button) findViewById(R.id.btn_add)).setText("＋ " + t("planner"));
         container = findViewById(R.id.list_container);
         findViewById(R.id.btn_add).setOnClickListener(v -> askPlan());
@@ -42,7 +42,7 @@ public class PlannerActivity extends BaseActivity {
         if (sorted.isEmpty()) {
             TextView tv = new TextView(this);
             tv.setText(t("no_data"));
-            tv.setTextColor(0xFFEDE9FE);
+            tv.setTextColor(textSecondary());
             tv.setTextSize(16);
             tv.setPadding(8, 24, 8, 24);
             container.addView(tv);
@@ -60,7 +60,7 @@ public class PlannerActivity extends BaseActivity {
             row.setLayoutParams(lp);
 
             Button check = new Button(this);
-            check.setText(item.optBoolean("done") ? "✅" : "⬜");
+            check.setText(item.optBoolean("done") ? "✓" : "○");
             check.setBackgroundResource(R.drawable.bg_button);
             check.setTextColor(0xFFFFFFFF);
             final JSONObject it = item;
@@ -77,7 +77,7 @@ public class PlannerActivity extends BaseActivity {
             tv.setText(DAYS[it.optInt("day")] + " " + it.optString("time") + "\n"
                     + it.optString("title") + " — " + it.optString("subject"));
             tv.setTextSize(16);
-            tv.setTextColor(0xFFFFFFFF);
+            tv.setTextColor(textPrimary());
             tv.setPadding(16, 0, 16, 0);
             tv.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
             row.addView(tv);
@@ -105,7 +105,7 @@ public class PlannerActivity extends BaseActivity {
         form.setPadding(32, 16, 32, 16);
         EditText etTitle = new EditText(this);
         etTitle.setHint("What to study?");
-        etTitle.setTextColor(0xFF000000);
+        etTitle.setTextColor(textPrimary());
         form.addView(etTitle);
         Spinner spSubject = new Spinner(this);
         spSubject.setAdapter(new ArrayAdapter<>(this,
@@ -117,7 +117,7 @@ public class PlannerActivity extends BaseActivity {
         form.addView(spDay);
         EditText etTime = new EditText(this);
         etTime.setHint("Time, e.g. 18:00");
-        etTime.setTextColor(0xFF000000);
+        etTime.setTextColor(textPrimary());
         form.addView(etTime);
         new AlertDialog.Builder(this)
                 .setTitle(t("planner"))

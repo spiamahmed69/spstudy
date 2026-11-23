@@ -36,7 +36,7 @@ public class TimerActivity extends BaseActivity {
                 | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_timer);
 
-        ((TextView) findViewById(R.id.tv_title)).setText("⏱ " + t("timer"));
+        ((TextView) findViewById(R.id.tv_title)).setText(t("timer"));
         tvTime = findViewById(R.id.tv_time);
         btnStartPause = findViewById(R.id.btn_start_pause);
         Button btnStop = findViewById(R.id.btn_stop);

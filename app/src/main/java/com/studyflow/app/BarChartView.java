@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.View;
 
 /** Simple 7-day bar chart drawn on a Canvas. No chart library needed. */
@@ -24,6 +25,14 @@ public class BarChartView extends View {
         invalidate();
     }
 
+    private int resolveTextColor() {
+        TypedValue tv = new TypedValue();
+        if (getContext().getTheme().resolveAttribute(android.R.attr.textColorPrimary, tv, true)
+                && tv.type >= TypedValue.TYPE_FIRST_COLOR_INT
+                && tv.type <= TypedValue.TYPE_LAST_COLOR_INT) return tv.data;
+        return 0xFF2B2B2B;
+    }
+
     public void setLabels(String[] l) {
         if (l != null && l.length == 7) labels = l;
         invalidate();
@@ -38,11 +47,11 @@ public class BarChartView extends View {
         int max = 1;
         for (int v : values) max = Math.max(max, v);
         Paint bar = new Paint(Paint.ANTI_ALIAS_FLAG);
-        bar.setColor(0xFFEC4899);
+        bar.setColor(0xFFFF9E1B);
         Paint bar2 = new Paint(Paint.ANTI_ALIAS_FLAG);
-        bar2.setColor(0xFF8B5CF6);
+        bar2.setColor(0xFFFFD08A);
         Paint text = new Paint(Paint.ANTI_ALIAS_FLAG);
-        text.setColor(0xFFFFFFFF);
+        text.setColor(resolveTextColor());
         text.setTextSize(28f);
         text.setTextAlign(Paint.Align.CENTER);
         float slot = w / 7f;

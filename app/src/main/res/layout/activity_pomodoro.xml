@@ -14,7 +14,7 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🍅 Pomodoro"
+            android:text="Pomodoro"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="26sp"
             android:textStyle="bold" />
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Focus"
-            android:textColor="#EC4899"
+            android:textColor="@color/orange"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp" />

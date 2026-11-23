@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple">#7C3AED</color>
-    <color name="violet">#8B5CF6</color>
-    <color name="pink">#EC4899</color>
-    <color name="deep_purple">#2A1650</color>
-    <color name="dark_bg">#160B29</color>
-    <color name="light_bg">#F3E8FF</color>
+    <color name="neu_bg">#EFF1F5</color>
+    <color name="neu_card">#FFFFFF</color>
+    <color name="neu_stroke">#E4E8EF</color>
+    <color name="neu_text">#2B2B2B</color>
+    <color name="neu_text_secondary">#7A8090</color>
+    <color name="neu_input">#FFFFFF</color>
+    <color name="orange">#FF9E1B</color>
+    <color name="orange_dark">#F57C00</color>
+    <color name="orange_light">#FFE3B3</color>
+    <color name="orange_pale">#FFF3E0</color>
+    <color name="light_bg">#EFF1F5</color>
     <color name="white">#FFFFFF</color>
-    <color name="soft_white">#EDE9FE</color>
-    <color name="dark_text">#1E1033</color>
-    <color name="accent">#DB2777</color>
+    <color name="dark_text">#2B2B2B</color>
+    <color name="accent">#FF9E1B</color>
+    <!-- Dark-theme variants (used directly by AppTheme, so the in-app
+         Dark Mode toggle works without depending on system night mode) -->
+    <color name="neu_bg_dark">#1F1F23</color>
+    <color name="neu_card_dark">#2C2C31</color>
+    <color name="neu_stroke_dark">#3A3A40</color>
+    <color name="neu_text_dark">#F2F2F2</color>
+    <color name="neu_text_secondary_dark">#A8ADB8</color>
+    <color name="neu_input_dark">#2C2C31</color>
 </resources>

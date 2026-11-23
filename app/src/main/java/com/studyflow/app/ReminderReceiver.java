@@ -27,7 +27,7 @@ public class ReminderReceiver extends BroadcastReceiver {
         } else {
             b = new Notification.Builder(context);
         }
-        b.setContentTitle("📚 StudyFlow — Revision Reminder")
+        b.setContentTitle("StudyFlow — Revision Reminder")
                 .setContentText(title)
                 .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
                 .setAutoCancel(true);

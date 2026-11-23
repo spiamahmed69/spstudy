@@ -2,8 +2,8 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <corners android:radius="24dp" />
-    <solid android:color="#40FFFFFF" />
+    <solid android:color="?attr/neuCard" />
     <stroke
         android:width="1dp"
-        android:color="#66FFFFFF" />
+        android:color="?attr/neuStroke" />
 </shape>

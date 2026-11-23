@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
-        <item name="android:windowBackground">@drawable/bg_gradient</item>
-        <item name="android:textColorPrimary">#FFFFFF</item>
-        <item name="android:textColorSecondary">#EDE9FE</item>
-        <item name="android:colorAccent">#EC4899</item>
+        <item name="android:windowBackground">@color/neu_bg_dark</item>
+        <item name="android:textColorPrimary">@color/neu_text_dark</item>
+        <item name="android:textColorSecondary">@color/neu_text_secondary_dark</item>
+        <item name="android:colorAccent">@color/orange</item>
+        <item name="neuCard">@color/neu_card_dark</item>
+        <item name="neuStroke">@color/neu_stroke_dark</item>
+        <item name="neuInput">@color/neu_input_dark</item>
     </style>
     <style name="LightTheme" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:windowBackground">@color/light_bg</item>
-        <item name="android:textColorPrimary">#1E1033</item>
-        <item name="android:textColorSecondary">#4C1D95</item>
-        <item name="android:colorAccent">#DB2777</item>
+        <item name="android:windowBackground">@color/neu_bg</item>
+        <item name="android:textColorPrimary">@color/neu_text</item>
+        <item name="android:textColorSecondary">@color/neu_text_secondary</item>
+        <item name="android:colorAccent">@color/orange</item>
+        <item name="neuCard">@color/neu_card</item>
+        <item name="neuStroke">@color/neu_stroke</item>
+        <item name="neuInput">@color/neu_input</item>
     </style>
     <style name="GlassPanel">
         <item name="android:background">@drawable/bg_glass</item>

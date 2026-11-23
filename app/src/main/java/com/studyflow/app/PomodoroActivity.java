@@ -20,7 +20,7 @@ public class PomodoroActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pomodoro);
-        ((TextView) findViewById(R.id.tv_title)).setText("🍅 " + t("pomodoro"));
+        ((TextView) findViewById(R.id.tv_title)).setText(t("pomodoro"));
         tvTime = findViewById(R.id.tv_time);
         tvMode = findViewById(R.id.tv_mode);
         tvCycles = findViewById(R.id.tv_cycles);
@@ -94,7 +94,7 @@ public class PomodoroActivity extends BaseActivity {
                     completed++;
                     StudyData.addSession(PomodoroActivity.this, "Pomodoro",
                             focusMinutes(findViewById(R.id.spinner_focus)), "pomodoro");
-                    toast(t("session_saved") + " 🎉");
+                    toast(t("session_saved"));
                     inFocus = false;
                     remainingMs = breakMinutes(findViewById(R.id.spinner_break)) * 60 * 1000L;
                     toast(t("break_time") + " — well done!");

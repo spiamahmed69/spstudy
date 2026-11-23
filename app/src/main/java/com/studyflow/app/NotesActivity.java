@@ -18,7 +18,7 @@ public class NotesActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        ((TextView) findViewById(R.id.tv_title)).setText("📝 " + t("notes"));
+        ((TextView) findViewById(R.id.tv_title)).setText(t("notes"));
         ((Button) findViewById(R.id.btn_add)).setText("＋ " + t("notes"));
         container = findViewById(R.id.list_container);
         findViewById(R.id.btn_add).setOnClickListener(v -> askNote(-1));
@@ -31,7 +31,7 @@ public class NotesActivity extends BaseActivity {
         if (notes.length() == 0) {
             TextView tv = new TextView(this);
             tv.setText(t("no_data"));
-            tv.setTextColor(0xFFEDE9FE);
+            tv.setTextColor(textSecondary());
             tv.setTextSize(16);
             tv.setPadding(8, 24, 8, 24);
             container.addView(tv);
@@ -53,9 +53,9 @@ public class NotesActivity extends BaseActivity {
             TextView tv = new TextView(this);
             String body = n.optString("body");
             if (body.length() > 80) body = body.substring(0, 80) + "…";
-            tv.setText("📝 " + n.optString("title") + "\n" + body);
+            tv.setText(n.optString("title") + "\n" + body);
             tv.setTextSize(16);
-            tv.setTextColor(0xFFFFFFFF);
+            tv.setTextColor(textPrimary());
             tv.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
             tv.setOnClickListener(v -> askNote(index));
             row.addView(tv);
@@ -81,12 +81,12 @@ public class NotesActivity extends BaseActivity {
         form.setPadding(32, 16, 32, 16);
         EditText etTitle = new EditText(this);
         etTitle.setHint("Title");
-        etTitle.setTextColor(0xFF000000);
+        etTitle.setTextColor(textPrimary());
         if (existing != null) etTitle.setText(existing.optString("title"));
         form.addView(etTitle);
         EditText etBody = new EditText(this);
         etBody.setHint("Write your note…");
-        etBody.setTextColor(0xFF000000);
+        etBody.setTextColor(textPrimary());
         etBody.setMinLines(5);
         etBody.setGravity(Gravity.TOP);
         if (existing != null) etBody.setText(existing.optString("body"));

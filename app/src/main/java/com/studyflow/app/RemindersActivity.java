@@ -26,7 +26,7 @@ public class RemindersActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        ((TextView) findViewById(R.id.tv_title)).setText("⏰ " + t("reminders"));
+        ((TextView) findViewById(R.id.tv_title)).setText(t("reminders"));
         ((Button) findViewById(R.id.btn_add)).setText("＋ " + t("reminders"));
         container = findViewById(R.id.list_container);
         findViewById(R.id.btn_add).setOnClickListener(v -> askReminder());
@@ -44,7 +44,7 @@ public class RemindersActivity extends BaseActivity {
         if (items.length() == 0) {
             TextView tv = new TextView(this);
             tv.setText(t("no_data"));
-            tv.setTextColor(0xFFEDE9FE);
+            tv.setTextColor(textSecondary());
             tv.setTextSize(16);
             tv.setPadding(8, 24, 8, 24);
             container.addView(tv);
@@ -64,10 +64,10 @@ public class RemindersActivity extends BaseActivity {
             lp.setMargins(0, 0, 0, 12);
             row.setLayoutParams(lp);
             TextView tv = new TextView(this);
-            tv.setText("⏰ " + String.format("%02d:%02d", r.optInt("hour"), r.optInt("minute"))
+            tv.setText(String.format("%02d:%02d", r.optInt("hour"), r.optInt("minute"))
                     + "  •  " + r.optString("title") + "\nDaily revision reminder");
             tv.setTextSize(16);
-            tv.setTextColor(0xFFFFFFFF);
+            tv.setTextColor(textPrimary());
             tv.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
             row.addView(tv);
             Button del = new Button(this);
@@ -91,7 +91,7 @@ public class RemindersActivity extends BaseActivity {
         form.setPadding(32, 16, 32, 16);
         EditText etTitle = new EditText(this);
         etTitle.setHint("e.g. Revise Mathematics");
-        etTitle.setTextColor(0xFF000000);
+        etTitle.setTextColor(textPrimary());
         form.addView(etTitle);
         TimePicker picker = new TimePicker(this);
         picker.setIs24HourView(true);

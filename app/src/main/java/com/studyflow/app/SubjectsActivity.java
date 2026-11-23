@@ -18,7 +18,7 @@ public class SubjectsActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        ((TextView) findViewById(R.id.tv_title)).setText("📖 " + t("subjects"));
+        ((TextView) findViewById(R.id.tv_title)).setText(t("subjects"));
         ((Button) findViewById(R.id.btn_add)).setText("＋ " + t("subjects"));
         container = findViewById(R.id.list_container);
         findViewById(R.id.btn_add).setOnClickListener(v -> askSubjectName());
@@ -46,7 +46,7 @@ public class SubjectsActivity extends BaseActivity {
             Button addCh = new Button(this);
             addCh.setText("＋ Chapter");
             addCh.setBackgroundResource(R.drawable.bg_glass);
-            addCh.setTextColor(0xFFFFFFFF);
+            addCh.setTextColor(textPrimary());
             addCh.setOnClickListener(v -> askChapterTitle(subjectIndex, subjects));
             container.addView(addCh);
             container.addView(spacer());
@@ -62,9 +62,9 @@ public class SubjectsActivity extends BaseActivity {
             for (int j = 0; j < total; j++) if (chapters.optJSONObject(j).optBoolean("done")) done++;
         }
         TextView tv = new TextView(this);
-        tv.setText("📖 " + s.optString("name") + "  •  " + done + "/" + total + " chapters");
+        tv.setText(s.optString("name") + "  •  " + done + "/" + total + " chapters");
         tv.setTextSize(17);
-        tv.setTextColor(0xFFFFFFFF);
+        tv.setTextColor(textPrimary());
         tv.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
         row.addView(tv);
         Button del = smallButton("✕");
@@ -81,9 +81,9 @@ public class SubjectsActivity extends BaseActivity {
         LinearLayout row = rowLayout();
         row.setPadding(48, 8, 8, 8);
         TextView tv = new TextView(this);
-        tv.setText((c.optBoolean("done") ? "✅ " : "⬜ ") + c.optString("title"));
+        tv.setText((c.optBoolean("done") ? "✓ " : "○ ") + c.optString("title"));
         tv.setTextSize(16);
-        tv.setTextColor(0xFFEDE9FE);
+        tv.setTextColor(textPrimary());
         tv.setLayoutParams(new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1));
         tv.setOnClickListener(v -> {
             try {
@@ -153,7 +153,7 @@ public class SubjectsActivity extends BaseActivity {
     private EditText inputBox(String hint) {
         EditText et = new EditText(this);
         et.setHint(hint);
-        et.setTextColor(0xFF000000);
+        et.setTextColor(textPrimary());
         et.setPadding(32, 24, 32, 24);
         return et;
     }
@@ -182,7 +182,7 @@ public class SubjectsActivity extends BaseActivity {
     private TextView emptyText() {
         TextView tv = new TextView(this);
         tv.setText(t("no_data"));
-        tv.setTextColor(0xFFEDE9FE);
+        tv.setTextColor(textSecondary());
         tv.setTextSize(16);
         tv.setPadding(8, 24, 8, 24);
         return tv;

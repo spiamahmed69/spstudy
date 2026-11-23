@@ -17,9 +17,9 @@ public class HistoryActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        ((TextView) findViewById(R.id.tv_title)).setText("🕘 " + t("history"));
+        ((TextView) findViewById(R.id.tv_title)).setText(t("history"));
         Button btnAdd = findViewById(R.id.btn_add);
-        btnAdd.setText("🗑 " + t("clear"));
+        btnAdd.setText(t("clear"));
         container = findViewById(R.id.list_container);
         btnAdd.setOnClickListener(v -> new AlertDialog.Builder(this)
                 .setTitle(t("clear"))
@@ -39,7 +39,7 @@ public class HistoryActivity extends BaseActivity {
         if (sessions.length() == 0) {
             TextView tv = new TextView(this);
             tv.setText(t("no_data"));
-            tv.setTextColor(0xFFEDE9FE);
+            tv.setTextColor(textSecondary());
             tv.setTextSize(16);
             tv.setPadding(8, 24, 8, 24);
             container.addView(tv);
@@ -58,12 +58,11 @@ public class HistoryActivity extends BaseActivity {
             lp.setMargins(0, 0, 0, 12);
             row.setLayoutParams(lp);
             TextView tv = new TextView(this);
-            String icon = "pomodoro".equals(s.optString("type")) ? "🍅" : "⏱";
-            tv.setText(icon + "  " + StudyData.prettyDate(s.optString("date"))
+            tv.setText(StudyData.prettyDate(s.optString("date"))
                     + "  •  " + s.optInt("minutes") + " " + t("minutes")
                     + "\n" + s.optString("subject"));
             tv.setTextSize(16);
-            tv.setTextColor(0xFFFFFFFF);
+            tv.setTextColor(textPrimary());
             row.addView(tv);
             container.addView(row);
         }
